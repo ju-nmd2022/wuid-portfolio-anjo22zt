@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "wuid-portfolio-anjo22zt",
+			"path": "."
+		},
+		{
+			"name": "html",
+			"path": "../../../Desktop/html"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wuid-portfolio-anjo22zt",
+		"liveServer.settings.port": 5501
+	}
+}
