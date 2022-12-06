@@ -2,31 +2,99 @@
     html,
 body {
   margin: 0px;
+  background-color:#234636b6;
+}
+body {background-image: url('grönt.jpg');
+}
+a {
+  color: #ffffff86;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 2rem 1fr 2rem;
+  grid-template-columns:repeat(1fr 4fr 1fr);
+  grid-template-rows: 8rem 1fr 2rem;
   grid-template-areas:
-    "header header header"
+    "header1 header2 header3"
     ". content ."
     "footer footer footer";
-  min-height: 100vh;
+}
+img {
+  max-height: 20rem
+
+}
+.about-me {
+  background-color:#13251dc7 ;
+  display: grid;
+  grid-area: header1;
+  color: #ffffffee;
+  font-size: 20pt;
+  align-items: flex-end;
 }
 
-.header {
-  background-color: aquamarine;
-  grid-area: header;
+.jönköping {
+  background-color:#13251dc7 ;
+  display: grid;
+  grid-area: header3;
+  color: #ffffffee;
+  font-size: 20pt;
+  align-items: flex-end
+}
+
+header {
+  display: grid;
+   background-color:#13251dc7 ;
+  grid-area: header2;
+  color: #ffffffee;
+  font-size: 100pt;
+  animation-name: headline-ani;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes headline-ani {
+  from {
+color: #13251dc7;
+  }
+  to {
+    color: #ffffff;
+  }
+  
 }
 
 .content {
-  background-color: blueviolet;
+  background-color: #ffffffc7;
+  display: grid;
   grid-area: content;
+  display: flex;
+  flex-wrap:wrap;
+  justify-items: center;
+  display: inline-block;
 }
+
 
 .footer {
-  background-color: blanchedalmond;
+  background-color: #13251db6;
   grid-area: footer;
+  color: #ffffff86;
 }
 
+@media screen and (max-width: 800px){
+.container {
+  display: grid;
+  grid-template-rows: 8rem 1fr 2rem ;
+ grid-template-columns: 1fr 4fr 1fr;
+ grid-template-areas: 
+ "header1 header2 header3"
+ "content content content"
+ "footer footer footer";
+}
+header{
+  font-size: 80pt;
+  display: flex;
+  display: grid;
+  align-items: end;
+}
+
+}
